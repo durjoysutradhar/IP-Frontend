@@ -130,9 +130,20 @@ const ManageBooks = () => {
       const payload = {
         ...formData,
         total_copies: Number(formData.total_copies),
-        publication_year: formData.publication_year ? Number(formData.publication_year) : null,
         category_id: Number(formData.category_id)
       };
+
+      if (formData.publication_year) {
+        payload.publication_year = Number(formData.publication_year);
+      }
+
+      if (!formData.isbn) {
+        delete payload.isbn;
+      }
+
+      if (!formData.description) {
+        delete payload.description;
+      }
 
       if (editingBook) {
         await api.put(`/books/${editingBook.id}`, payload);
@@ -146,7 +157,11 @@ const ManageBooks = () => {
       resetForm();
       fetchBooks();
     } catch (err) {
-      alert(err.response?.data?.message || 'Failed to save book');
+      const backendErrors = err.response?.data?.errors;
+      const message = Array.isArray(backendErrors) && backendErrors.length > 0
+        ? backendErrors.map((item) => item.message).join(', ')
+        : err.response?.data?.message || 'Failed to save book';
+      alert(message);
     } finally {
       setSaving(false);
     }

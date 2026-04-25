@@ -4,6 +4,8 @@ import LoadingSpinner from '../../components/LoadingSpinner';
 import { FileText, Download, Trash2, Clock, CheckCircle, Activity } from 'lucide-react';
 import api from '../../utils/api';
 
+const apiRoot = import.meta.env.VITE_API_URL?.replace(/\/api\/?$/, '') || window.location.origin;
+
 const MyNotes = () => {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -111,7 +113,7 @@ const MyNotes = () => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <a
-                      href={`http://localhost:5000${note.file_url}`}
+                      href={`${apiRoot}${note.file_url}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"

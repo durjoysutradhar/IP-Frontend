@@ -113,6 +113,7 @@ const MyProfile = () => {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 </span>
+                {' '}
                 Profile Sync Active
               </div>
               <h1 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">My Profile</h1>
@@ -166,7 +167,7 @@ const MyProfile = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-slate-300 bg- px-3 py-2.5 text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-slate-900 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       required
                     />
                   ) : (
@@ -198,7 +199,7 @@ const MyProfile = () => {
                       name="student_id"
                       value={formData.student_id}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-slate-300 bg-gray-950 px-3 py-2.5 text-slate-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-slate-900 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       placeholder="Enter your student ID"
                     />
                   ) : (

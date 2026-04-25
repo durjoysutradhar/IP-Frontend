@@ -192,7 +192,7 @@ const Register = () => {
                 name="name"
                 type="text"
                 required
-                className={`w-full rounded-xl border border-slate-300 bg-gray-800 px-4 py-3 text-slate-900 placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
+                className={`w-full rounded-xl border border-slate-300 bg-slate-800 px-4 py-3 text-white placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
                 placeholder="Enter your full name"
                 value={formData.name}
                 onChange={handleChange}
@@ -212,7 +212,7 @@ const Register = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className={`w-full rounded-xl border border-slate-300 bg-gray-800 px-4 py-3 text-slate-900 placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
+                className={`w-full rounded-xl border border-slate-300 bg-slate-800 px-4 py-3 text-white placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
                 placeholder="you@university.edu"
                 value={formData.email}
                 onChange={handleChange}
@@ -230,7 +230,7 @@ const Register = () => {
                 id="department"
                 name="department"
                 type="text"
-                className={`w-full rounded-xl border border-slate-300 bg-gray-800 px-4 py-3 text-slate-900 placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
+                className={`w-full rounded-xl border border-slate-300 bg-slate-800 px-4 py-3 text-white placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
                 placeholder="e.g., Computer Science"
                 value={formData.department}
                 onChange={handleChange}
@@ -251,7 +251,7 @@ const Register = () => {
                   type={showPassword ? "text" : "password"}
                   autoComplete="new-password"
                   required
-                  className={`w-full rounded-xl border border-slate-300 bg-gray-800 px-4 py-3 pr-11 text-slate-900 placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
+                  className={`w-full rounded-xl border border-slate-300 bg-slate-800 px-4 py-3 pr-11 text-white placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
                   placeholder="At least 6 characters"
                   value={formData.password}
                   onChange={handleChange}
@@ -285,7 +285,7 @@ const Register = () => {
                   type={showConfirmPassword ? "text" : "password"}
                   autoComplete="new-password"
                   required
-                  className={`w-full rounded-xl border border-slate-300 bg-gray-800 px-4 py-3 pr-11 text-slate-900 placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
+                  className={`w-full rounded-xl border border-slate-300 bg-slate-800 px-4 py-3 pr-11 text-white placeholder:text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-slate-400 hover:shadow-sm focus:-translate-y-0.5 focus:outline-none focus:ring-2 ${roleTheme.focus}`}
                   placeholder="Re-enter your password"
                   value={formData.confirmPassword}
                   onChange={handleChange}
