@@ -81,9 +81,22 @@ export const AuthProvider = ({ children }) => {
 
       return { success: true };
     } catch (error) {
+      const backendMessage = error.response?.data?.message;
+      const validationErrors = error.response?.data?.errors;
+
+      let message = backendMessage || error.message || 'Registration failed';
+
+      if (Array.isArray(validationErrors) && validationErrors.length > 0) {
+        message = validationErrors.map((e) => e.message).join(', ');
+      }
+
+      if (!error.response) {
+        message = 'Cannot reach backend API. Check VITE_API_URL and redeploy frontend.';
+      }
+
       return {
         success: false,
-        message: error.response?.data?.message || 'Registration failed'
+        message
       };
     }
   };
